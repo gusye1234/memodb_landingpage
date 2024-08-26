@@ -67,7 +67,7 @@ export default function Hero() {
                             className="text-5xl md:text-6xl mb-4"
                             data-aos="zoom-y-out"
                         >
-                            <span className="bg-clip-text font-extrabold leading-tighter tracking-tighter text-transparent bg-gradient-to-r from-blue-500 to-teal-400 font-mono">
+                            <span className="bg-clip-text font-extrabold leading-tighter tracking-tighter text-transparent bg-gradient-to-r from-blue-500 to-teal-600 font-mono">
                                 memodb.io
                             </span>
                             <br />
@@ -79,20 +79,21 @@ export default function Hero() {
                                 data-aos="zoom-y-out"
                                 data-aos-delay="150"
                             >
-                                <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-400'>Say goodbye to the complexities</span> of vector databases, history messages, and RAG frameworks.
+                                <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>Say goodbye to the complexities</span> of vector databases, history messages, and RAG frameworks.
                                 {" "}
-                                With <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-400'>one API token</span>, you can effortlessly store and manage{" "}
+                                With <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>one API token</span>, you can effortlessly store and manage{" "}
                                 <AddonRead addon='various types' content='For example: one-year of Chats, 6-month of blogs/podcasts' /> of user data using <AddonRead addon='the best' content='memodb.io use hybrid indexing that can handle both global and local questions. memodb.io is far better than naive RAG' /> indexing.
 
                                 <br />
                                 <br />
-                                Imagine having all your users' states and memories seamlessly organized in one place,
-                                allowing you to focus on <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-400'>building exceptional user experiences</span>.
+                                Imagine having all your users{"'"} states and memories seamlessly organized in one place,
+                                allowing you to focus on <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>building exceptional user experiences</span>.
 
                             </p>
                             <Link
                                 className={buttonVariants({
-                                    variant: 'default'
+                                    variant: 'default',
+                                    className: "text-lg"
                                 })}
                                 href={'/#newsletter'}
                             >
