@@ -13,9 +13,6 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "MemoDB",
   description: "Memory for your LLM App",
-  icons: {
-    icon: '/favicon.ico',
-  }
 };
 
 export default function RootLayout({
