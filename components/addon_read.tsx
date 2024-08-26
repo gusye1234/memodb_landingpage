@@ -1,23 +1,21 @@
 import {
-    HoverCard,
-    HoverCardContent,
-    HoverCardTrigger,
-} from "@/components/ui/hover-card"
-
-
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/popover"
 
 
 
 const AddonRead = ({ addon, content }: { addon: string, content: string }) => {
     return (
-        <HoverCard>
-            <HoverCardTrigger className="underline">
+        <Popover>
+            <PopoverTrigger className="underline">
                 {addon}
-            </HoverCardTrigger>
-            <HoverCardContent className="text-sm text-start">
+            </PopoverTrigger>
+            <PopoverContent className="text-sm text-start">
                 {content}
-            </HoverCardContent>
-        </HoverCard>
+            </PopoverContent>
+        </Popover>
     )
 }
 
