@@ -2,10 +2,18 @@
 import { buttonVariants } from '@/components/ui/button'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 import AddonRead from './addon_read'
 
 export default function Hero() {
     const { setTheme, theme } = useTheme()
+    const [isMounted, setIsMounted] = useState(false)
+
+    // 确保组件在客户端渲染时更新状态
+    useEffect(() => {
+        setIsMounted(true)
+    }, [])
+
     return (
         <section className="relative">
             {/* Illustration behind hero content */}
@@ -13,49 +21,51 @@ export default function Hero() {
                 className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1"
                 aria-hidden="true"
             >
-                <svg
-                    width="1360"
-                    height="578"
-                    viewBox="0 0 1360 578"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <defs>
-                        <linearGradient
-                            x1="50%"
-                            y1="0%"
-                            x2="50%"
-                            y2="100%"
-                            id="illustration-01"
-                        >
-                            <stop stopColor="#FFF" offset="0%" />
-                            <stop stopColor="#EAEAEA" offset="77.402%" />
-                            <stop stopColor="#DFDFDF" offset="100%" />
-                        </linearGradient>
+                {isMounted && (
+                    <svg
+                        width="1360"
+                        height="578"
+                        viewBox="0 0 1360 578"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <defs>
+                            <linearGradient
+                                x1="50%"
+                                y1="0%"
+                                x2="50%"
+                                y2="100%"
+                                id="illustration-01"
+                            >
+                                <stop stopColor="#FFF" offset="0%" />
+                                <stop stopColor="#EAEAEA" offset="77.402%" />
+                                <stop stopColor="#DFDFDF" offset="100%" />
+                            </linearGradient>
 
-                        <linearGradient
-                            x1="50%"
-                            y1="0%"
-                            x2="50%"
-                            y2="100%"
-                            id="illustration-02"
-                        >
-                            <stop stopColor="#222" offset="0%" />
-                            <stop stopColor="#888" offset="77.402%" />
-                            <stop stopColor="#AAA" offset="100%" />
-                        </linearGradient>
-                    </defs>
-                    {theme === 'dark' ? (
-                        <g fill="url(#illustration-02)" fillRule="evenodd">
-                            <circle cx="1232" cy="128" r="128" />
-                            <circle cx="155" cy="443" r="64" />
-                        </g>
-                    ) : (
-                        <g fill="url(#illustration-01)" fillRule="evenodd">
-                            <circle cx="1232" cy="128" r="128" />
-                            <circle cx="155" cy="443" r="64" />
-                        </g>
-                    )}
-                </svg>
+                            <linearGradient
+                                x1="50%"
+                                y1="0%"
+                                x2="50%"
+                                y2="100%"
+                                id="illustration-02"
+                            >
+                                <stop stopColor="#222" offset="0%" />
+                                <stop stopColor="#888" offset="77.402%" />
+                                <stop stopColor="#AAA" offset="100%" />
+                            </linearGradient>
+                        </defs>
+                        {theme === 'dark' ? (
+                            <g fill="url(#illustration-02)" fillRule="evenodd">
+                                <circle cx="1232" cy="128" r="128" />
+                                <circle cx="155" cy="443" r="64" />
+                            </g>
+                        ) : (
+                            <g fill="url(#illustration-01)" fillRule="evenodd">
+                                <circle cx="1232" cy="128" r="128" />
+                                <circle cx="155" cy="443" r="64" />
+                            </g>
+                        )}
+                    </svg>
+                )}
             </div>
 
             <div className="max-w-6xl mx-auto px-4 sm:px-6">

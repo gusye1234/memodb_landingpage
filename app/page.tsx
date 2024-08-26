@@ -4,7 +4,7 @@ import { FooterText } from "@/components/footer";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen justify-around items-center p-4 w-full overflow-y-auto overflow-x-hidden">
+    <main className="flex flex-col min-h-full justify-start items-center p-4 w-full overflow-y-auto overflow-x-hidden">
       <Hero />
       {/* <FeaturesBlocks /> */}
       <FooterText className="py-8" />

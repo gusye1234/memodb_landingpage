@@ -13,6 +13,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "MemoDB",
   description: "Memory for your LLM App",
+  icons: {
+    icon: '/favicon.ico',
+  }
 };
 
 export default function RootLayout({
@@ -31,7 +34,7 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
       >
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-col grow min-h-screen">
             <Header />
             <main className="flex flex-col flex-1 bg-muted/50">{children}</main>
           </div>
