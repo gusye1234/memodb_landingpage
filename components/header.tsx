@@ -4,6 +4,8 @@ import Link from 'next/link'
 
 import Image from 'next/image'
 import { ThemeToggle } from './theme-toggle'
+import { buttonVariants } from './ui/button'
+import { Github } from 'lucide-react'
 
 async function UserOrLogin() {
   return (
@@ -40,7 +42,17 @@ export function Header() {
           <UserOrLogin />
         </React.Suspense>
       </div>
-      <ThemeToggle />
+      <div className='flex items-center gap-1'>
+        <Link href="https://github.com/gusye1234/memodb" className={
+          buttonVariants({
+            variant: 'ghost',
+            size: 'icon',
+          })
+        }>
+          <Github />
+        </Link>
+        <ThemeToggle />
+      </div>
 
     </header>
   )

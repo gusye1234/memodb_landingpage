@@ -77,7 +77,7 @@ export default function Hero() {
                             className="text-5xl md:text-6xl mb-4"
                             data-aos="zoom-y-out"
                         >
-                            <span className="bg-clip-text font-extrabold leading-tighter tracking-tighter text-transparent bg-gradient-to-r from-blue-500 to-teal-600 font-mono">
+                            <span className="bg-clip-text font-extrabold tracking-tight text-transparent bg-gradient-to-r from-blue-500 to-teal-600 font-mono">
                                 memodb.io
                             </span>
                             <br />
@@ -85,19 +85,17 @@ export default function Hero() {
                         </h1>
                         <div className="max-w-3xl mx-auto">
                             <p
-                                className="text-lg font-normal text-zinc-400 dark:text-zinc-500 mb-8 text-start"
+                                className="text-primary/30 text-xl font-light leading-relaxed  mb-8 text-start"
                                 data-aos="zoom-y-out"
                                 data-aos-delay="150"
                             >
-                                <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>Say goodbye to the complexities</span> of vector databases, history messages, and RAG frameworks.
-                                {" "}
-                                With <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>one API token</span>, you can effortlessly store and manage{" "}
-                                <AddonRead addon='various types' content='For example: one-year of Chats, 6-month of blogs/podcasts' /> of user data using <AddonRead addon='the best' content='memodb.io use hybrid indexing that can handle both global and local questions. memodb.io is far better than naive RAG' /> indexing.
-
-                                <br />
-                                <br />
-                                Imagine having all your users{"'"} states and memories seamlessly organized in one place,
-                                allowing you to focus on <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>building exceptional user experiences</span>.
+                                <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>Say goodbye to the complexities of Search</span> {" "}
+                                in <AddonRead addon="RAG" content='RAG stands for Retrieval-Augmented Generation, a method that make large corups can be awared by Large Language Model and generate more stateful and factual responses.' />.
+                                Store and manage{" "}
+                                <AddonRead addon='various types' content='For example: one-year of Chats, 6-month of blogs/podcasts' /> of user data using{" "}
+                                <AddonRead addon='the best algorithm' content='memodb.io use hybrid indexing that can handle both global and local questions.' />{" "}
+                                <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>with a API token</span>.
+                                Create a memodb and all you need is to focus on <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>building exceptional user experiences</span>.
 
                             </p>
                             <Link

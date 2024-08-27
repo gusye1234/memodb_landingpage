@@ -9,7 +9,7 @@ import {
 const AddonRead = ({ addon, content }: { addon: string, content: string }) => {
     return (
         <Popover>
-            <PopoverTrigger className="underline">
+            <PopoverTrigger className="underline underline-offset-2">
                 {addon}
             </PopoverTrigger>
             <PopoverContent className="text-sm text-start">
