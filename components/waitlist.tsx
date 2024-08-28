@@ -36,7 +36,7 @@ export default function Newsletter() {
                 <div className="grow py-12 md:py-20">
                     {/* CTA box */}
                     <div
-                        className="relative bg-background rounded-lg py-8 px-8 md:py-12 md:px-12 shadow-2xl overflow-hidden"
+                        className="relative border bg-background rounded-lg py-8 px-8 md:py-12 md:px-12 shadow-md overflow-hidden"
                         data-aos="zoom-y-out"
                     >
                         <div className="relative flex flex-col md:flex-row justify-between items-center">

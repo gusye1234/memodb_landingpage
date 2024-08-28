@@ -20,13 +20,13 @@ const CanvasBackground = () => {
             const height = canvas.height;
             const dotSpacing = 32;
             const dotRadius = 1;
-            const dotColor = '#66a';
-
+            const dotColor = theme === 'dark' ? '#669' : '#bbb';
+            const widthMargin = 0.5 * (width - dotSpacing * (Math.floor(width / dotSpacing) - 1));
+            const heightMargin = 0.5 * (height - dotSpacing * (Math.floor(height / dotSpacing) - 1));
             ctx.fillStyle = dotColor;
             ctx.clearRect(0, 0, width, height);
-
-            for (let x = dotSpacing / 2; x < width; x += dotSpacing) {
-                for (let y = dotSpacing / 2; y < height; y += dotSpacing) {
+            for (let x = widthMargin; x <= (width - widthMargin); x += dotSpacing) {
+                for (let y = heightMargin / 2; y <= (height - heightMargin); y += dotSpacing) {
                     ctx.beginPath();
                     ctx.arc(x, y, dotRadius, 0, Math.PI * 2, true);
                     ctx.fill();
@@ -56,9 +56,8 @@ const CanvasBackground = () => {
         right: 0,
         bottom: 0,
         left: 0,
-        zIndex: -1,
+        zIndex: -10,
         pointerEvents: 'none',
-        mixBlendMode: 'screen',
     }} />;
 };
 
