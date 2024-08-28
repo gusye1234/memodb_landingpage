@@ -17,7 +17,7 @@ export default function Hero() {
     return (
         <section className="relative">
             {/* Illustration behind hero content */}
-            <div
+            {/* <div
                 className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1"
                 aria-hidden="true"
             >
@@ -66,7 +66,7 @@ export default function Hero() {
                         )}
                     </svg>
                 )}
-            </div>
+            </div> */}
 
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
                 {/* Hero content */}
@@ -90,7 +90,7 @@ export default function Hero() {
                                 data-aos-delay="150"
                             >
                                 <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>Say goodbye to the complexities of Search</span> {" "}
-                                in <AddonRead addon="RAG" content='RAG stands for Retrieval-Augmented Generation, a method that make large corups can be awared by Large Language Model and generate more stateful and factual responses.' />.
+                                in <AddonRead addon="RAG" content='RAG stands for Retrieval-Augmented Generation, a method that make large corups be awared by Large Language Model and generate more stateful and factual responses.' />.
                                 Store and manage{" "}
                                 <AddonRead addon='various types' content='For example: one-year of Chats, 6-month of blogs/podcasts' /> of user data using{" "}
                                 <AddonRead addon='the best algorithm' content='memodb.io use hybrid indexing that can handle both global and local questions.' />{" "}

@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils"
 import { Header } from "@/components/header";
 import { Providers } from "@/components/providers";
+import CanvasBackground from "@/components/background";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
         disableTransitionOnChange
       >
           <div className="flex flex-col grow min-h-screen">
+            <CanvasBackground />
             <Header />
             <main className="flex flex-col flex-1 bg-muted/50">{children}</main>
           </div>
