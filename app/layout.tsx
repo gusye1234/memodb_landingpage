@@ -28,8 +28,7 @@ export default function RootLayout({
         inter.className
       )}><Providers
         attribute="class"
-        defaultTheme="system"
-        enableSystem
+        defaultTheme="dark"
         disableTransitionOnChange
       >
           <div className="flex flex-col grow min-h-screen">
