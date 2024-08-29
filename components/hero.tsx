@@ -85,17 +85,17 @@ export default function Hero() {
                         </h1>
                         <div className="max-w-3xl mx-auto">
                             <p
-                                className="text-primary/30 text-xl font-light leading-relaxed  mb-8 text-start"
+                                className="text-primary/60 text-xl font-light leading-relaxed  mb-8 text-start"
                                 data-aos="zoom-y-out"
                                 data-aos-delay="150"
                             >
                                 <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>Say goodbye to the complexities of Search</span> {" "}
                                 in <AddonRead addon="RAG" content='RAG stands for Retrieval-Augmented Generation, a method that make large corups be awared by Large Language Model and generate more stateful and factual responses.' />.
                                 Store and manage{" "}
-                                <AddonRead addon='various types' content='For example: one-year of Chats, 6-month of blogs/podcasts' /> of user data using{" "}
-                                <AddonRead addon='the best algorithm' content='memodb.io use hybrid indexing that can handle both global and local questions.' />{" "}
-                                <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>with a API token</span>.
-                                Create a memodb and all you need is to focus on <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>building exceptional user experiences</span>.
+                                <AddonRead addon='various' content='For example: one-year of Chats, 6-month of blogs/podcasts' /> types of user data using{" "}
+                                the <AddonRead addon='best' content='memodb.io use hybrid indexing that can handle both global and local questions.' /> algorithm{" "}
+                                <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>with one API token</span>.
+                                All you need is to focus on <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>building the best user experiences</span>.
 
                             </p>
                             <Link

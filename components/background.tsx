@@ -18,7 +18,7 @@ const CanvasBackground = () => {
         const drawDots = () => {
             const width = canvas.width;
             const height = canvas.height;
-            const dotSpacing = 32;
+            const dotSpacing = 30;
             const dotRadius = 1;
             const dotColor = theme === 'dark' ? '#669' : '#bbb';
             const widthMargin = 0.5 * (width - dotSpacing * (Math.floor(width / dotSpacing) - 1));
