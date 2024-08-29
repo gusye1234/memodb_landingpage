@@ -1,6 +1,4 @@
 'use client' // This is a client component 👈🏽
-
-import Image from 'next/image'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Loader2 } from 'lucide-react'
@@ -9,16 +7,12 @@ import { useFormState, useFormStatus } from 'react-dom'
 import { getMessageFromCode } from '@/lib/utils'
 import { toast } from 'sonner'
 import { appendEmail } from './waitlist_action'
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger
-} from '@/components/ui/popover'
+import confetti from 'canvas-confetti' // 引入 canvas-confetti
 
 export default function Newsletter() {
     const [done, setDone] = useState(false)
     const [result, dispatch] = useFormState(appendEmail, undefined)
-    const [imageLoading, onImageLoading] = useState(true)
+
     // Append Function
     useEffect(() => {
         if (result) {
@@ -30,6 +24,21 @@ export default function Newsletter() {
             }
         }
     }, [result])
+    useEffect(() => {
+        if (done) {
+            triggerConfetti()
+        }
+    }, [done])
+
+    // 触发烟花特效的函数
+    const triggerConfetti = () => {
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+        })
+    }
+
     return (
         <section id="newsletter">
             <div className="max-w-4xl mb-80 md:mb-64 mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-1">
@@ -67,24 +76,6 @@ export default function Newsletter() {
                                                 />
                                                 <SubmitButton />
                                             </div>
-                                            {/* <Popover>
-                                                <PopoverTrigger asChild>
-                                                    <Button variant="default" type="button">
-                                                        扫码加群
-                                                    </Button>
-                                                </PopoverTrigger>
-                                                <PopoverContent className="w-64 h-96 flex justify-center items-center">
-                                                    {imageLoading && <Loader2 className="animate-spin" />}
-                                                    <Image
-                                                        fill
-                                                        src="/wechat_qr.jpg"
-                                                        alt="qr_code"
-                                                        className="min-h-full rounded-md border-2"
-                                                        onLoadingComplete={() => onImageLoading(false)}
-                                                        priority
-                                                    />
-                                                </PopoverContent>
-                                            </Popover> */}
                                         </div>
                                     )}
                                 </form>
@@ -92,7 +83,6 @@ export default function Newsletter() {
                         </div>
                     </div>
                 </div>
-                {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfjvfZvnsb4jmiLwFEkeWRxcjqbPfOE35Xad-xgXikcznW2Bw/viewform?embedded=true" width="840" height="682" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>           */}
             </div>
         </section>
     )
