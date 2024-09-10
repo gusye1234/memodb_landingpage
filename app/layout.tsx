@@ -12,8 +12,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MemoDB",
-  description: "Memory for your LLM App",
+  title: "MemoBase",
+  description: "Manage user memory for your LLM applications",
 };
 
 export default function RootLayout({

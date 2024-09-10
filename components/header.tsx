@@ -16,14 +16,14 @@ async function UserOrLogin() {
         className="flex flex-row items-center mr-2"
       >
         <Image
-          src="/memodb.svg"
+          src="/memobase-light.svg"
           alt="logo"
           className='dark:hidden'
           width={164}
           height={128}
         />
         <Image
-          src="/memodb-dark.svg"
+          src="/memobase-dark.svg"
           alt="logo"
           className='hidden dark:block'
           width={164}
@@ -43,7 +43,7 @@ export function Header() {
         </React.Suspense>
       </div>
       <div className='flex items-center gap-1'>
-        <Link href="https://github.com/gusye1234/memodb" className={
+        <Link href="https://github.com/memodb-io/memobase" className={
           buttonVariants({
             variant: 'ghost',
             size: 'icon',

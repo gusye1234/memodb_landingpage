@@ -25,7 +25,7 @@ export async function appendEmail(
 
         if (parsedCredentials.success) {
             console.log('email success', email)
-            await kv.sadd(`memodb:waitlist`, email)
+            await kv.sadd(`memobase:waitlist`, email)
             return {
                 type: 'success',
                 resultCode: ResultCode.EmailSubmitted

@@ -78,10 +78,12 @@ export default function Hero() {
                             data-aos="zoom-y-out"
                         >
                             <span className="bg-clip-text font-extrabold tracking-tight text-transparent bg-gradient-to-r from-blue-500 to-teal-600 font-mono">
-                                memodb.io
+                                memobase
                             </span>
                             <br />
-                            <p className="text-2xl font-bold md:text-4xl">Bring personalized memory to your LLM App</p>
+                            <p className="text-xl font-bold md:text-4xl">
+                                Manage user memory for your LLM applications
+                            </p>
                         </h1>
                         <div className="max-w-3xl mx-auto">
                             <p
@@ -93,7 +95,7 @@ export default function Hero() {
                                 in <AddonRead addon="RAG" content='RAG stands for Retrieval-Augmented Generation, a method that make large corups be awared by Large Language Model and generate more stateful and factual responses.' />.
                                 Store and manage{" "}
                                 <AddonRead addon='various' content='For example: one-year of Chats, 6-month of blogs/podcasts' /> types of user data using{" "}
-                                the <AddonRead addon='best' content='memodb.io use hybrid indexing that can handle both global and local questions.' /> algorithm{" "}
+                                the <AddonRead addon='best' content='MemoBase use hybrid indexing that can handle both global and local questions.' /> algorithm{" "}
                                 <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>with one API token</span>.
                                 All you need is to focus on <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>building the best user experiences</span>.
 
