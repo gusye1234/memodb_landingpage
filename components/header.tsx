@@ -43,7 +43,7 @@ export function Header() {
         </React.Suspense>
       </div>
       <div className='flex items-center gap-1'>
-        <Link href="https://github.com/memodb-io/memobase" className={
+        <Link href="https://github.com/memodb-io" className={
           buttonVariants({
             variant: 'ghost',
             size: 'icon',
