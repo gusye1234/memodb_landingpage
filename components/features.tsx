@@ -1,3 +1,21 @@
+import React from "react"
+import Link from "next/link"
+
+function FeatureBlock({ title, children }: { title: string, children: React.ReactNode }) {
+  return (
+    <div className="hover:scale-105 relative flex flex-col items-center h-44 sm:h-48 lg:h-56 p-6 bg-background border-2 rounded-md">
+      <h2 className="font-semibold mb-4">
+        <span className="text-lg bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 line-clamp-1">
+          {title}
+        </span>
+      </h2>
+      <p className="text-foreground/50 text-start">
+        {children}
+      </p>
+    </div>
+  )
+}
+
 export default function FeaturesBlocks() {
   return (
     <section className="relative">
@@ -7,43 +25,32 @@ export default function FeaturesBlocks() {
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6">
         {/* Items */}
-        <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-1 lg:grid-cols-3 items-start md:max-w-lg lg:max-w-none">
+        <div className="max-w-full text-center mb-8 font-semibold text-3xl md:text-4xl">
+          MemoBase is not just another RAG pipeline...
+        </div>
+        <div className=" max-w-sm sm:max-w-full mx-auto grid gap-2 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start lg:max-w-none">
           {/* 1st item */}
-          <div className="relative flex flex-col items-center p-6 md:h-36 lg:h-48 bg-background rounded">
-            <h2 className="font-semibold mb-4">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
-                ❓ 我们是谁
-              </span>{' '}
-            </h2>
-            <p className="text-gray-600 text-sm text-start">
-              ELight团队全部由有留学经历的学长学姐组成。
-              我们中有深耕留学服务的“老炮”，也有来自微软，腾讯等“AI技术大佬”。
-            </p>
-          </div>
-          <div className="relative flex flex-col items-center md:h-36 lg:h-48 p-6 bg-background rounded">
-            <h2 className="font-semibold mb-4">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
-                💪 为什么选择我们
-              </span>{' '}
-            </h2>
-            <p className="text-gray-600 text-sm text-start">
-              基于人工智能技术，我们提供24小时的随时服务和定制化的留学方案，而只用1%的价格。
-              每个同学拿到的，都是从多个成功留学案例中AI总结出来的最优解。
-            </p>
-          </div>
-
-          <div className="relative flex flex-col items-center md:h-36 lg:h-48 p-6 bg-background rounded">
-            <h2 className="font-semibold mb-4">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
-                🎯 我们的愿景
-              </span>{' '}
-            </h2>
-            <p className="text-gray-600 text-sm text-start">
-              我们致力于把留学行业里经验和复杂性，转移到人工智能上。让每个同学都能
-              <span className="font-bold">随时随地</span>
-              享受到最好的留学服务。
-            </p>
-          </div>
+          <FeatureBlock title="🚀 Scale to million users">
+            It's designed to be user-first and able to scale out. Each user's memory is managing separately.
+          </FeatureBlock>
+          <FeatureBlock title="🧠 AI Memory">
+            It helps your App to build user memory. Create engaging experiences that keep users coming back.
+          </FeatureBlock>
+          <FeatureBlock title="🐙 Open source">
+            It's core is open source and <Link href="https://github.com/memodb-io/memobase" className="underline">available</Link> for everyone to use/hack.
+            We believe open source is the only way to keep everyone happy.
+          </FeatureBlock>
+          <FeatureBlock title="🪶 Multi-modal" >
+            User memory can be multi-modal.
+            MemoBase handles chats, docs, images, transcripts ... all in one place.
+          </FeatureBlock>
+          <FeatureBlock title="☁️ Built on Cloud">
+            It can be self-managed, or you can use our cloud services.
+            We help your memobase project to be scalable and reliable.
+          </FeatureBlock>
+          <FeatureBlock title="💰 Pay as you go">
+            It's billing depends on how many users you have. We're on the same team to get more users for your app!
+          </FeatureBlock>
 
           {/* 2nd item */}
         </div>
