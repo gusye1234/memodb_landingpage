@@ -31,14 +31,14 @@ export default function FeaturesBlocks() {
         <div className=" max-w-sm sm:max-w-full mx-auto grid gap-2 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start lg:max-w-none">
           {/* 1st item */}
           <FeatureBlock title="🚀 Scale to million users">
-            It's designed to be user-first and able to scale out. Each user's memory is managing separately.
+            It&apos;s designed to be user-first and able to scale out. Each user&apos;s memory is managing separately.
           </FeatureBlock>
           <FeatureBlock title="🧠 AI Memory">
             It helps your App to build user memory. Create engaging experiences that keep users coming back.
           </FeatureBlock>
           <FeatureBlock title="🐙 Open source">
-            It's core is open source and <Link href="https://github.com/memodb-io/memobase" className="underline">available</Link> for everyone to use/hack.
-            We believe open source is the only way to keep everyone happy.
+            It&apos;s core is open source and <Link href="https://github.com/memodb-io/memobase" className="underline">available</Link> for everyone to use/hack.
+            We believe open source is the only way to make everyone happy.
           </FeatureBlock>
           <FeatureBlock title="🪶 Multi-modal" >
             User memory can be multi-modal.
@@ -49,7 +49,7 @@ export default function FeaturesBlocks() {
             We help your memobase project to be scalable and reliable.
           </FeatureBlock>
           <FeatureBlock title="💰 Pay as you go">
-            It's billing depends on how many users you have. We're on the same team to get more users for your app!
+            It&apos;s billing depends on your usage. We&apos;re on the same team to get more users on your app!
           </FeatureBlock>
 
           {/* 2nd item */}

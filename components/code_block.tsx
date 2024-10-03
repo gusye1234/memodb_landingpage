@@ -1,5 +1,3 @@
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { solarizedDarkAtom, oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { CopyBlock, dracula } from "react-code-blocks";
 
 
