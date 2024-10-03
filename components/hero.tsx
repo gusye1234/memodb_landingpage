@@ -61,7 +61,7 @@ client = MemoBaseClient(
                             >
                                 Join the waitlist right now!
                             </Link>
-                            <MyCoolCodeBlock code={demoCode} className='mt-8 text-start rounded-lg font-mono' />
+                            <MyCoolCodeBlock code={demoCode} className='mt-8 text-start rounded-lg font-mono text-sm font-semibold max-w-lg mx-auto' />
                         </div>
                     </div>
                 </div>
