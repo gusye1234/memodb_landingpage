@@ -4,9 +4,11 @@ import { X } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 
+import React from 'react';
+
 export default function Banner() {
 
-    const [bannerOpen, setBannerOpen] = useState<boolean>(true)
+    const [bannerOpen, setBannerOpen] = React.useState<boolean>(true)
 
     return (
         <>
