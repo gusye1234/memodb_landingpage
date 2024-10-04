@@ -16,6 +16,8 @@ export const metadata: Metadata = {
   description: "Manage user memory for your LLM applications",
 };
 
+export const runtime = 'edge'
+
 export default function RootLayout({
   children,
 }: Readonly<{
