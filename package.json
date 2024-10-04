@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.9",
     "@radix-ui/react-hover-card": "^1.1.1",
     "@radix-ui/react-popover": "^1.1.1",
     "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.1",
     "@types/react-syntax-highlighter": "^15.5.13",
     "@vercel/kv": "^2.0.0",
     "canvas-confetti": "^1.9.3",

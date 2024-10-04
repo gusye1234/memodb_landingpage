@@ -41,7 +41,7 @@ export default function Newsletter() {
 
     return (
         <section id="newsletter">
-            <div className="max-w-4xl mb-80 md:mb-64 mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-1">
+            <div className="max-w-4xl mt-96 md:mt-32 mb-80 md:mb-64 mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-1">
                 <div className="grow py-12 md:py-20">
                     {/* CTA box */}
                     <div

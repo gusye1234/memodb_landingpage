@@ -43,6 +43,12 @@ export function Header() {
         </React.Suspense>
       </div>
       <div className='flex items-center gap-1'>
+        <Link href="/pricing" className={buttonVariants({
+          variant: 'ghost',
+          className: 'font-semibold'
+        })}>
+          Pricing
+        </Link>
         <Link href="https://github.com/memodb-io" className={
           buttonVariants({
             variant: 'ghost',

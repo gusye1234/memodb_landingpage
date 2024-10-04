@@ -3,7 +3,7 @@ import Link from "next/link"
 
 function FeatureBlock({ title, children }: { title: string, children: React.ReactNode }) {
   return (
-    <div className="hover:scale-105 relative flex flex-col items-center h-44 sm:h-48 lg:h-56 p-6 bg-background border-2 rounded-md">
+    <div className="hover:scale-105 relative flex flex-col items-center min-h-44 sm:min-h-48 lg:h-56 p-6 bg-background border-2 rounded-md">
       <h2 className="font-semibold mb-4">
         <span className="text-lg bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 line-clamp-1">
           {title}
@@ -25,10 +25,10 @@ export default function FeaturesBlocks() {
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6">
         {/* Items */}
-        <div className="max-w-full text-center mb-8 font-semibold text-3xl md:text-4xl">
+        <div className="max-w-full text-center mb-8 text-3xl md:text-4xl">
           MemoBase is not just another RAG pipeline...
         </div>
-        <div className=" max-w-sm sm:max-w-full mx-auto grid gap-2 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start lg:max-w-none">
+        <div className=" max-w-lg sm:max-w-full mx-auto grid gap-2 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start lg:max-w-none">
           {/* 1st item */}
           <FeatureBlock title="🚀 Scale to million users">
             It&apos;s designed to be user-first and able to scale out. Each user&apos;s memory is managing separately.
