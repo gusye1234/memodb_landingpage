@@ -130,7 +130,7 @@ print(hit_blobs)
                                 >
                                     <div>
                                         <div className="font-bold leading-snug tracking-tight mb-1 text-primary">Multi-modal memory</div>
-                                        <div className="text-primary/50 text-sm">MemoBase recogizes different types of memory, and optimizes separately.</div>
+                                        <div className="text-primary/50 text-sm">MemoBase recognizes different types of memory, and optimizes separately.</div>
                                     </div>
                                     <div className="flex justify-center items-center w-8 h-8 bg-secondary rounded-full flex-shrink-0 ml-3">
                                         <Rocket />
