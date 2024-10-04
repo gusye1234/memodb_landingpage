@@ -45,7 +45,7 @@ client = MemoBaseClient(
                                 data-aos="zoom-y-out"
                                 data-aos-delay="150"
                             >
-                                <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>Managin user memory</span>{' '}
+                                <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>Managing user memory</span>{' '}
                                 in your LLM applications should be easy.
                                 With <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>few lines of code</span>, you can easily store and manage{" "}
                                 <AddonRead addon='various' content='chats, docs, images and transcripts...' /> types of user data.
