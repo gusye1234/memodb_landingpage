@@ -31,7 +31,7 @@ export async function appendEmail(
             const today = new Date()
             const date = today.toISOString().split('T')[0]
             console.log('email success', email)
-            await kv.sadd(`memobase:waitlist`, email)
+            // await kv.sadd(`memobase:waitlist`, email)
             const waitlist_cf_kv = getRequestContext().env.waitlist_kv
             await waitlist_cf_kv.put(`memobase:waitlist:${email}`, date)
             return {
