@@ -3,6 +3,9 @@
 import { ResultCode } from '@/lib/utils'
 import { z } from 'zod'
 import { kv } from '@vercel/kv'
+import { getRequestContext } from "@cloudflare/next-on-pages";
+
+// export const runtime = "edge"
 
 interface Result {
     type: string
@@ -23,9 +26,13 @@ export async function appendEmail(
                 email
             })
 
-        if (parsedCredentials.success) {
+        if (parsedCredentials.success && email) {
+            // const today = new Date()
+            // const date = today.toISOString().split('T')[0]
+            // const waitlist_cf_kv = getRequestContext().env.waitlist_kv
             console.log('email success', email)
             await kv.sadd(`memobase:waitlist`, email)
+            // await waitlist_cf_kv.put(`memobase:waitlist:${email}`, date)
             return {
                 type: 'success',
                 resultCode: ResultCode.EmailSubmitted
@@ -37,6 +44,7 @@ export async function appendEmail(
             }
         }
     } catch (error) {
+        console.error("appendEmail error", error)
         return {
             type: 'error',
             resultCode: ResultCode.UnknownError
