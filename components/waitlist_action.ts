@@ -27,12 +27,12 @@ export async function appendEmail(
             })
 
         if (parsedCredentials.success && email) {
-            // const today = new Date()
-            // const date = today.toISOString().split('T')[0]
-            // const waitlist_cf_kv = getRequestContext().env.waitlist_kv
+            const today = new Date()
+            const date = today.toISOString().split('T')[0]
             console.log('email success', email)
             await kv.sadd(`memobase:waitlist`, email)
-            // await waitlist_cf_kv.put(`memobase:waitlist:${email}`, date)
+            const waitlist_cf_kv = getRequestContext().env.waitlist_kv
+            await waitlist_cf_kv.put(`memobase:waitlist:${email}`, date)
             return {
                 type: 'success',
                 resultCode: ResultCode.EmailSubmitted
