@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils"
 import { Header } from "@/components/header";
 import { Providers } from "@/components/providers";
+import { Toaster } from "sonner";
 import CanvasBackground from "@/components/background";
 
 const inter = Inter({
@@ -39,6 +40,7 @@ export default function RootLayout({
             <main className="mt-8 flex flex-col flex-1">
               {children}
             </main>
+            <Toaster />
           </div>
         </Providers>
       </body>

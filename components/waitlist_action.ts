@@ -39,7 +39,7 @@ export async function appendEmail(
     } catch (error) {
         return {
             type: 'error',
-            resultCode: ResultCode.InvalidSubmission
+            resultCode: ResultCode.UnknownError
         }
     }
     return {
