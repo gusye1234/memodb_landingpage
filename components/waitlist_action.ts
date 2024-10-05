@@ -10,6 +10,7 @@ import { getRequestContext } from "@cloudflare/next-on-pages";
 interface Result {
     type: string
     resultCode: ResultCode
+    errmsg?: string
 }
 
 export async function appendEmail(
@@ -47,7 +48,8 @@ export async function appendEmail(
         console.error("appendEmail error", error)
         return {
             type: 'error',
-            resultCode: ResultCode.UnknownError
+            resultCode: ResultCode.UnknownError,
+            errmsg: `${error}`
         }
     }
     return {

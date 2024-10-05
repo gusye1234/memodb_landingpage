@@ -18,7 +18,7 @@ export default function Newsletter() {
         if (result) {
             if (result.type === 'error') {
                 toast.error(getMessageFromCode(result.resultCode))
-                console.error("waitlist error", getMessageFromCode(result.resultCode))
+                console.error("waitlist error", getMessageFromCode(result.resultCode), result.errmsg)
             } else {
                 toast.success(getMessageFromCode(result.resultCode))
                 setDone(true)
