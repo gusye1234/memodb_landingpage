@@ -38,7 +38,7 @@ blob = DocBlob(
     content="Why I love MemoBase💓...", 
     fields={"from": "note"}
 )
-blob_id = user.upsert(blob)
+blob_id = user.insert(blob)
 print(user.get(blob_id))
 
 # Query
