@@ -15,7 +15,7 @@ client = MemoBaseClient(
   project_url="<YOUR_RPOJECT_URL>", 
   api_key="<YOUR_ACCESS_TOKEN>"
 )`
-    const demoCode2 = `# Bind any date to a user
+    const demoCode2 = `# Bind any data to a user
 user_id = client.add_user({
     "age": 25, 
     "name": "Fool"
