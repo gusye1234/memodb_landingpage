@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useState, useRef, useEffect } from 'react'
 import { Transition } from '@headlessui/react'
 import { MyCoolCodeBlock } from './code_block'
-import { User, Database, Plus, Rocket } from 'lucide-react'
+import { User, Database, Plus, Rocket, PictureInPicture } from 'lucide-react'
 
 export default function Features() {
     const demoCode1 = `#! pip install memobase
@@ -51,6 +51,9 @@ print(hit_blobs)
     ImageBlob, 
     TranscriptBlob
 )
+`
+    const demoCode5 = `user = client.user(user_id)
+print(user.persona_claims())
 `
     const [tab, setTab] = useState<number>(1)
 
@@ -136,6 +139,19 @@ print(hit_blobs)
                                         <Rocket />
                                     </div>
                                 </Link>
+                                <Link
+                                    className={`flex justify-between items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 5 ? 'bg-background shadow-md  hover:shadow-lg hover:border-gray-200' : 'bg-secondary border-transparent border-gray-200'}`}
+                                    href="#0"
+                                    onClick={(e) => { e.preventDefault(); setTab(5); }}
+                                >
+                                    <div>
+                                        <div className="font-bold leading-snug tracking-tight mb-1 text-primary">User Persona with ease</div>
+                                        <div className="text-primary/50 text-sm">Memobase creates and maintain user personas for you automatically.</div>
+                                    </div>
+                                    <div className="flex justify-center items-center w-8 h-8 bg-secondary rounded-full flex-shrink-0 ml-3">
+                                        <PictureInPicture />
+                                    </div>
+                                </Link>
                             </div>
                         </div>
 
@@ -200,6 +216,22 @@ print(hit_blobs)
                                 >
                                     <div className="relative inline-flex flex-col">
                                         <MyCoolCodeBlock showLineNumbers={false} code={demoCode4} className='text-start rounded-lg font-mono text-sm font-semibold' />
+                                    </div>
+                                </Transition>
+
+                                {/* Item 5 */}
+                                <Transition
+                                    show={tab === 5}
+                                    appear={true}
+                                    enter="transition ease-in-out duration-700 transform order-first"
+                                    enterFrom="opacity-0 translate-y-16"
+                                    enterTo="opacity-100 translate-y-0"
+                                    leave="transition ease-in-out duration-300 transform absolute"
+                                    leaveFrom="opacity-100 translate-y-0"
+                                    leaveTo="opacity-0 -translate-y-16"
+                                >
+                                    <div className="relative inline-flex flex-col">
+                                        <MyCoolCodeBlock showLineNumbers={false} code={demoCode5} className='text-start rounded-lg font-mono text-sm font-semibold' />
                                     </div>
                                 </Transition>
                             </div>
