@@ -48,6 +48,7 @@ print(hit_blobs)
     const demoCode4 = `from memobase import (
     DocBlob, 
     ChatBlob, 
+    CodeBlob, 
     ImageBlob, 
     TranscriptBlob
 )
