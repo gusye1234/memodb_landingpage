@@ -54,6 +54,14 @@ print(hit_blobs)
 `
     const demoCode5 = `user = client.user(user_id)
 print(user.persona_claims())
+
+# [
+#   {
+#     "id": ...,
+#     "content": "the user is the author of memobase",
+#     "from_blob": [..., ...,]
+#   },...
+# ]
 `
     const [tab, setTab] = useState<number>(1)
 
