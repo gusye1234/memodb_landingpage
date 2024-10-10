@@ -26,12 +26,12 @@ client.update_user(user_id, {
     "name": "New Name"
 })
 
-print(client.get_user(user_id))    
+print(client.get_user(user_id).fields)    
 
 client.delete_user(user_id)`
     const demoCode3 = `from memobase import DocBlob
 
-user = client.user(user_id)
+user = client.get_user(user_id)
 
 # Insert
 blob = DocBlob(
@@ -53,7 +53,7 @@ print(hit_blobs)
     TranscriptBlob
 )
 `
-    const demoCode5 = `user = client.user(user_id)
+    const demoCode5 = `user = client.get_user(user_id)
 print(user.persona_claims())
 
 # [
