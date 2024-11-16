@@ -29,21 +29,19 @@ client.update_user(user_id, {
 print(client.get_user(user_id).fields)    
 
 client.delete_user(user_id)`
-    const demoCode3 = `from memobase import DocBlob
+    const demoCode3 = `from memobase import ChatBlob
 
-user = client.get_user(user_id)
-
-# Insert
-blob = DocBlob(
-    content="Why I love MemoBase💓...", 
-    fields={"from": "note"}
-)
-blob_id = user.insert(blob)
-print(user.get(blob_id))
-
-# Query
-hit_blobs = user.query("Should I use MemoBase?")
-print(hit_blobs)
+messages = [
+  {
+      "role": "user",
+      "content": "Hello, I'm Gus",
+  },
+  {
+      "role": "assistant",
+      "content": "Hi, nice to meet you, Gus!",
+  }
+]
+bid = u.insert(ChatBlob(messages=messages))
 `
     const demoCode4 = `from memobase import (
     DocBlob, 
@@ -54,15 +52,16 @@ print(hit_blobs)
 )
 `
     const demoCode5 = `user = client.get_user(user_id)
-print(user.persona_claims())
+print(u.profile())
+# [UserProfile(topic="basic_info", sub_topic="name", content="Gus"),...]
 
-# [
-#   {
-#     "id": ...,
-#     "content": "the user is the author of memobase",
-#     "from_blob": [..., ...,]
-#   },...
-# ]
+print("\\n".join([p.describe for p in u.profile()]))
+# basic_info: name - Gus
+# basic_info: age - 25
+# ...
+# interest: foods - Mexican cuisine
+# psychological: goals - Build something that maybe useful
+# ...
 `
     const [tab, setTab] = useState<number>(1)
 
@@ -136,19 +135,6 @@ print(user.persona_claims())
                                     </div>
                                 </Link>
                                 <Link
-                                    className={`flex justify-between items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 4 ? 'bg-background shadow-md  hover:shadow-lg hover:border-gray-200' : 'bg-secondary border-transparent border-gray-200'}`}
-                                    href="#0"
-                                    onClick={(e) => { e.preventDefault(); setTab(4); }}
-                                >
-                                    <div>
-                                        <div className="font-bold leading-snug tracking-tight mb-1 text-primary">Multi-modal Memory</div>
-                                        <div className="text-primary/50 text-sm">MemoBase recognizes different types of memory, and optimizes separately.</div>
-                                    </div>
-                                    <div className="flex justify-center items-center w-8 h-8 bg-secondary rounded-full flex-shrink-0 ml-3">
-                                        <Rocket />
-                                    </div>
-                                </Link>
-                                <Link
                                     className={`flex justify-between items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 5 ? 'bg-background shadow-md  hover:shadow-lg hover:border-gray-200' : 'bg-secondary border-transparent border-gray-200'}`}
                                     href="#0"
                                     onClick={(e) => { e.preventDefault(); setTab(5); }}
@@ -159,6 +145,19 @@ print(user.persona_claims())
                                     </div>
                                     <div className="flex justify-center items-center w-8 h-8 bg-secondary rounded-full flex-shrink-0 ml-3">
                                         <PictureInPicture />
+                                    </div>
+                                </Link>
+                                <Link
+                                    className={`flex justify-between items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 4 ? 'bg-background shadow-md  hover:shadow-lg hover:border-gray-200' : 'bg-secondary border-transparent border-gray-200'}`}
+                                    href="#0"
+                                    onClick={(e) => { e.preventDefault(); setTab(4); }}
+                                >
+                                    <div>
+                                        <div className="font-bold leading-snug tracking-tight mb-1 text-primary">Multi-modal Memory</div>
+                                        <div className="text-primary/50 text-sm">{"(Coming Soon)"}MemoBase recognizes different types of memory, and optimizes separately.</div>
+                                    </div>
+                                    <div className="flex justify-center items-center w-8 h-8 bg-secondary rounded-full flex-shrink-0 ml-3">
+                                        <Rocket />
                                     </div>
                                 </Link>
                             </div>
