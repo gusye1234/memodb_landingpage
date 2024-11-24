@@ -45,7 +45,7 @@ print(u.profile())
                                 Manage user profile for your LLM Apps
                             </p>
                         </h1>
-                        <div className="max-w-3xl mx-auto">
+                        <div className="max-w-sm md:max-w-3xl mx-auto">
                             <p
                                 className="text-primary/60 text-xl font-light leading-relaxed  mb-8 text-start"
                                 data-aos="zoom-y-out"

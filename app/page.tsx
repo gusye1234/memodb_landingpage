@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <main className="flex flex-col min-h-full justify-start items-center p-4 w-full overflow-y-auto overflow-x-hidden">
       <Hero />
+      <Newsletter />
       <FeaturesBlocks />
       <Features />
-      <Newsletter />
       <FooterText className="py-8" />
       <Banner />
     </main>

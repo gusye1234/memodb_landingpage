@@ -42,7 +42,7 @@ export default function Newsletter() {
 
     return (
         <section id="newsletter">
-            <div className="max-w-4xl mt-[512px] md:mt-32 mb-80 md:mb-64 mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-1">
+            <div className="max-w-4xl  mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-1">
                 <div className="grow py-12 md:py-20">
                     {/* CTA box */}
                     <div
@@ -53,7 +53,7 @@ export default function Newsletter() {
                             {/* CTA content */}
                             <div className="grow text-center lg:text-left lg:max-w-xl">
                                 <h3 className="text-2xl font-semibold text-foreground mb-2">
-                                    🚀 Join to make a better LLM app
+                                    🚀 Join the waitlist!
                                 </h3>
                                 <p className="text-foreground/50 text-lg mb-6">
                                     Leave your email, we will send you the latest updates.
