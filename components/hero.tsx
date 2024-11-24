@@ -8,12 +8,18 @@ import { MyCoolCodeBlock } from './code_block'
 
 export default function Hero() {
     const [isMounted, setIsMounted] = useState(false)
-    const demoCode = `from memobase import MemoBaseClient
+    const demoCode = `u = client.get_user(id)
+print(u.profile())
 
-client = MemoBaseClient(
-  project_url="<YOUR_RPOJECT_URL>", 
-  api_key="<YOUR_ACCESS_TOKEN>"
-)`
+# Output:
+[
+    UserProfile("basic_info", "name", "Gus"),
+    UserProfile("basic_info", "age", 25),
+    UserProfile("basic_info", "marital", "married"),
+    UserProfile("interests", "movies", "Gattaca")
+    # ... and more
+]
+`
     // 确保组件在客户端渲染时更新状态
     useEffect(() => {
         setIsMounted(true)
@@ -36,7 +42,7 @@ client = MemoBaseClient(
                             </span>
                             <br />
                             <p className="text-xl font-bold md:text-4xl">
-                                Manage user memory for your LLM applications
+                                Manage user profile for your LLM Apps
                             </p>
                         </h1>
                         <div className="max-w-3xl mx-auto">
@@ -45,9 +51,9 @@ client = MemoBaseClient(
                                 data-aos="zoom-y-out"
                                 data-aos-delay="150"
                             >
-                                <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>Managing user memory</span>{' '}
-                                in your LLM applications should be easy.
-                                With <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>few lines of code</span>, you can easily store and manage{" "}
+                                MemoBase is a <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>user profile management</span> backend for your LLM Apps.
+                                With <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>few lines of code</span>,
+                                you can easily maintain dynamic user profiles from {" "}
                                 <AddonRead addon='various' content='chats, docs, images and transcripts...' /> types of user data.
                                 So you can create truly <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>personalized experiences</span> in your App that keep users coming back.
 
@@ -59,9 +65,9 @@ client = MemoBaseClient(
                                 })}
                                 href={'/#newsletter'}
                             >
-                                Join the waitlist right now!
+                                Does your AI understand your users?
                             </Link>
-                            <MyCoolCodeBlock code={demoCode} className='mt-8 text-start rounded-lg font-mono text-sm font-semibold max-w-lg mx-auto' />
+                            <MyCoolCodeBlock code={demoCode} className='mt-8 text-start rounded-lg font-mono text-sm font-semibold max-w-lg mx-auto' showLineNumbers={false} />
                         </div>
                     </div>
                 </div>

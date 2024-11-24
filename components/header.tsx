@@ -43,6 +43,12 @@ export function Header() {
         </React.Suspense>
       </div>
       <div className='flex items-center gap-1'>
+        <Link href="https://docs.memobase.io" className={buttonVariants({
+          variant: 'ghost',
+          className: 'font-semibold'
+        })}>
+          Docs
+        </Link>
         <Link href="/pricing" className={buttonVariants({
           variant: 'ghost',
           className: 'font-semibold'
