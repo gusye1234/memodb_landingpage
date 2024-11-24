@@ -12,7 +12,7 @@ export function FooterText({ className, ...props }: React.ComponentProps<'p'>) {
       )}
       {...props}
     >
-      Built by <ExternalLink href="/">memodb.io</ExternalLink>
+      Built by <ExternalLink href="https://memodb.io">memodb.io</ExternalLink>
     </p>
   )
 }
