@@ -154,7 +154,7 @@ print("\\n".join([p.describe for p in u.profile()]))
                                 >
                                     <div>
                                         <div className="font-bold leading-snug tracking-tight mb-1 text-primary">Multi-modal Memory</div>
-                                        <div className="text-primary/50 text-sm">{"(Coming Soon)"}MemoBase recognizes different types of memory, and optimizes separately.</div>
+                                        <div className="text-primary/50 text-sm">{"(Coming Soon) "}MemoBase recognizes different types of memory, and optimizes separately.</div>
                                     </div>
                                     <div className="flex justify-center items-center w-8 h-8 bg-secondary rounded-full flex-shrink-0 ml-3">
                                         <Rocket />
@@ -165,7 +165,7 @@ print("\\n".join([p.describe for p in u.profile()]))
 
                         {/* Tabs items */}
                         <div className="max-w-sm md:max-w-none md:w-full mx-auto md:col-span-8 lg:col-span-7 mb-8 md:mb-0 md:order-1" data-aos="zoom-y-out" ref={tabs}>
-                            <div className="relative flex flex-col text-center lg:text-right">
+                            <div className="mb-8 md:mb-0 relative flex flex-col text-center lg:text-right">
                                 {/* Item 1 */}
                                 <Transition
                                     show={tab === 1}
