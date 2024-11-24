@@ -51,11 +51,11 @@ print(u.profile())
                                 data-aos="zoom-y-out"
                                 data-aos-delay="150"
                             >
-                                MemoBase is a <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>user profile management</span> backend for your LLM Apps.
+                                MemoBase is a <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>user profile</span> backend for your LLM Apps.
                                 With <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>few lines of code</span>,
                                 you can easily maintain dynamic user profiles from {" "}
                                 <AddonRead addon='various' content='chats, docs, images and transcripts...' /> types of user data.
-                                So you can create truly <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>personalized experiences</span> in your App that keep users coming back.
+                                So you can create truly <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-teal-600'>personalized AI</span> in your App that keep users coming back.
 
                             </p>
                             <Link
